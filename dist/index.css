@@ -1,0 +1,103 @@
+body
+{
+    background-image: url('./images/background.jpg');
+    background-position: 50%;
+    background-size:cover;
+    margin: 0;
+}
+
+
+.navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#logo
+{
+    font-size: 30px;
+}
+
+#home
+{
+    margin-left: 70%;
+}
+
+.navlink
+{
+    margin-right: 2%;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.home-body
+{   
+    display: flex;
+    flex-direction: column;
+    margin-top: 25vh;
+    background-color: white;
+}
+
+.home-body > *
+{
+    text-align: center;
+}
+
+.navlink:hover
+{
+    color: #fce8e8;
+}
+
+#main
+{
+    height: 92vh;
+}
+
+.menu-body
+{
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menuTitle
+{
+    text-align: center;
+}
+
+#menu
+{
+    display: grid;
+    grid-template-columns: 80vw;
+    grid-template-rows: repeat(4, 25vh);
+    row-gap: 5vh;
+}
+
+#menu>div
+{
+    display: flex;
+}
+
+.image
+{
+    width: 15vw;
+    height: 25vh;
+    background-size: 100%;
+    background-position: center;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    border-radius: 2%/8%;
+}
