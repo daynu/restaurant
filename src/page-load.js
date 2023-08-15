@@ -1,3 +1,5 @@
+import menuLoad from "./menu-load";
+
 
 export default function pageLoad()
 {   
@@ -10,8 +12,15 @@ export default function pageLoad()
     greeting.innerText = "Welcome to Piacenti!";
     greeting.id = 'greeting';
     let homeText = document.createElement('p')
-    homeText.innerText = "The best Moldovan pies in US"
+    homeText.innerText = "The best Moldovan pies in the US"
     homeText.id = "home-text";
-    homeBody.append(greeting, homeText)
+    let orderButton = document.createElement('button');
+    orderButton.innerText = "Order Now !";
+    orderButton.id = 'orderButton';
+    orderButton.addEventListener('click', () =>
+    {
+        menuLoad()
+    })
+    homeBody.append(greeting, homeText, orderButton)
     main.append(homeBody)
 }
