@@ -1,9 +1,24 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url('./fonts/Lobster-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Space';
+    src: url(./fonts/SpaceGrotesk-Regular.ttf);
+}
+
+
 body
 {
     background-image: url('./images/background.jpg');
     background-position: 50%;
     background-size:cover;
     margin: 0;
+    font-family: 'Space';
+    width: 100vw;
+    height: fit-content;
+    overflow: hidden;
 }
 
 
@@ -16,11 +31,20 @@ body
     color: white;
     padding-left: 5%;
     padding-right: 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #logo
 {
-    font-size: 30px;
+    font-size: 40px;
+    font-family: 'Lobster';
+    margin:1vh;
+    letter-spacing:3px;
+    font-weight:100;
+    cursor: pointer;
 }
 
 #home
@@ -40,7 +64,7 @@ body
 {   
     display: flex;
     flex-direction: column;
-    margin-top: 25vh;
+    margin-top: 30vh;
     background-color: white;
 }
 
@@ -49,21 +73,42 @@ body
     text-align: center;
 }
 
+.home-body>#home-text
+{
+    margin-top: 0;
+    margin-bottom: 5vh;
+    font-size: 20px;
+}
+
+#greeting
+{
+    margin-bottom: 5vh;
+}
+
 .navlink:hover
 {
     color: #fce8e8;
 }
 
-#main
-{
-    height: 92vh;
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
 }
+
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    
+}
+
+
 
 .menu-body
 {
     background-color: white;
     width: 80%;
-    height: 80%;
+    height: fit-content;
     margin-right: 10%;
     margin-left: 10%;
     margin-top: 5%;
@@ -71,6 +116,8 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 2%/3%;
+    border: 5px solid red;
 }
 
 #menuTitle
@@ -81,14 +128,20 @@ body
 #menu
 {
     display: grid;
-    grid-template-columns: 80vw;
-    grid-template-rows: repeat(4, 25vh);
+    grid-template-columns: repeat(2, 25vw);
+    grid-template-rows: repeat(2, 45vh);
     row-gap: 5vh;
+    column-gap: 5vw;
+    margin-bottom: 2vh;
 }
 
 #menu>div
 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid red;
+    border-radius: 2%/2%;
 }
 
 .image
@@ -97,7 +150,94 @@ body
     height: 25vh;
     background-size: 100%;
     background-position: center;
-    margin-left: 5vw;
-    margin-right: 2vw;
     border-radius: 2%/8%;
+    align-self: center;
+    margin-top: 2vh;
+}
+
+#orderButton
+{
+    width: 150px;
+    align-self: center;
+    height: 5vh;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2%/8%;
+    font-size: 20px;
+    margin-bottom: 3vh;
+    cursor: pointer;
+}
+
+.orderFood
+{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2%/8%;
+    width: 150px;
+    aspect-ratio: 3/1;
+    margin-bottom: 2vh;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#menu>div>p
+{
+    margin-bottom: 0.4vh;
+    margin-top: 0.4vh;
+}
+
+
+#menu>div>p:nth-child(2)
+{
+    font-size: 25px;
+}
+
+#menu>div>p:nth-child(4)
+{
+    font-size: 20px;
+}
+
+.contact-body
+{
+    padding-top: 5%;
+    background-color: white;
+
+}
+
+#map
+{
+    height: 45vh;
+    width: 100vw;
+}
+
+#contact-title
+{
+    text-align: center;
+    margin-top: 1%;
+}
+
+#contact-info
+{
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    grid-template-rows: 40%;
+    color: white;
+    padding-left: 20%;
+    gap: 5%;
+    padding-top: 3%;
+    padding-bottom: 4%;
+}
+
+#contact-info>div>p
+{
+    font-size: 20px;
+}
+
+#contact-info>div
+{
+    text-align: center;
 }
