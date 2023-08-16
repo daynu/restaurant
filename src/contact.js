@@ -1,3 +1,5 @@
+import { Loader } from "@googlemaps/js-api-loader"
+
 export default function contactLoad()
 {
     let main = document.getElementById('main')
